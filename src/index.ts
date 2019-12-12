@@ -1,12 +1,5 @@
-import axios from "axios";
+import { User } from "./models/User";
 
-const baseUrl = "http://localhost:3000";
+const user = new User({ id: 1 });
 
-axios.post(`${baseUrl}/users`, {
-  name: "myName",
-  age: 20
-});
-
-axios.get(`${baseUrl}/users/1`).then(res => {
-  console.log(res);
-});
+user.fetch();

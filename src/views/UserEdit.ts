@@ -6,8 +6,8 @@ import { UserForm } from "./UserForm";
 export class UserEdit extends View<User, UserProps> {
   regionsMap(): { [key: string]: string } {
     return {
-      userShow: ".user-show",
-      userForm: ".user-form"
+      userShow: "user-show",
+      userForm: "user-form"
     };
   }
 
@@ -19,8 +19,8 @@ export class UserEdit extends View<User, UserProps> {
   template(): string {
     return `
       <div>
-        <div class="user-show"></div>
-        <div class="user-form"></div>
+        <user-show></user-show>        
+        <user-form></user-form>
       </div>
     `;
   }
